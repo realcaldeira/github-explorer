@@ -44,6 +44,7 @@ export function Dashboard() {
     navigate('Repository', {
       repositoryId: id
     })
+   
     /**
      * TODO - navigate to the Repository screen sending repository id.
      * Remember to use the correct prop name (repositoryId) to the repositoy id:
