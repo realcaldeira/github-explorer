@@ -36,12 +36,8 @@ export function Repository() {
   const { findRepositoryById } = useRepositories();
   const repository = findRepositoryById(repositoryId);
 
-
-
   function handleIssueNavigation(issueUrl: string) {
-    
     Linking.openURL(issueUrl);
-
   }
 
 
@@ -49,7 +45,7 @@ export function Repository() {
     <Background>
       <Container>
         <RepoInfo>
-          {/* <OwnerAvatar source={{ uri:  }} /> */}
+          <OwnerAvatar source={{ uri: repository.owner.avatar_url }} />
 
           <TextGroup>
             <TitleAnimation>
@@ -88,7 +84,7 @@ export function Repository() {
                 title: issue.title,
                 subTitle: issue.user.login,
               }}
-            // TODO - onPress prop calling 
+           
             onPress={()=>handleIssueNavigation(issue.html_url)}
             />
           )}

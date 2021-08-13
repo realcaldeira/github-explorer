@@ -27,32 +27,16 @@ export function Dashboard() {
   const { addRepository, repositories } = useRepositories();
 
   function handleAddRepository() {
-    /**
-     * TODO: 
-     * - call addRepository function sending inputText value;
-     * 
-     * - clean inputText value.
-     */
 
      addRepository(inputText)
      setInputText('')
     inputRef.current?.blur();
-    //ok
   }
 
   function handleRepositoryPageNavigation(id: number) {
     navigate('Repository', {
       repositoryId: id
     })
-   
-    /**
-     * TODO - navigate to the Repository screen sending repository id.
-     * Remember to use the correct prop name (repositoryId) to the repositoy id:
-     * 
-     * navigate(SCREEN NAME, {
-     *  repositoryId: id of the repository
-     * })
-     */
   }
 
   return (
